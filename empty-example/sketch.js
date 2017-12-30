@@ -82,18 +82,18 @@ function draw()
   // }
   if(drawB && counter<1)
   {
-    snowman = createSprite(0 , height-90);
+    snowman = createSprite(0 , height-120);
   snowman.addImage(snoimage); 
   snowman.scale=0.29; 
   snowman.velocity.x=8; 
-  snowman.friction =0.06;  
+  snowman.friction =0.04;  
   
 
-  snowman2 = createSprite(width , height-90);
+  snowman2 = createSprite(width , height-120);
   snowman2.addImage(snoimage2); 
   snowman2.scale=0.29; 
   snowman2.velocity.x=-8; 
-  snowman2.friction =0.06;  
+  snowman2.friction =0.04;  
 
   counter++; 
   }
