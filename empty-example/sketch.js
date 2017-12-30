@@ -7,9 +7,10 @@ var snowman ;
 var snoman2; 
 var snoimage;
 var snoimage2;
-
+var drawB = false; 
 let spritesheet ;
 let textures= []; 
+var counter=0; 
 function preload()
 {
   spritesheet = loadImage("flakesheet.png"); 
@@ -41,18 +42,11 @@ function setup() {
 
   }
 
-  snowman = createSprite(100 , height-90);
-  snowman.addImage(snoimage); 
-  snowman.scale=0.29; 
-  snowman.velocity.x=4; 
-  snowman.friction =0.01;  
+  setInterval(function()
+{
+drawB=true; 
+}, 5000); 
   
-
-  snowman2 = createSprite(width-100 , height-90);
-  snowman2.addImage(snoimage2); 
-  snowman2.scale=0.29; 
-  snowman2.velocity.x=-4; 
-  snowman2.friction =0.01;  
   
   santa.play(); 
 }
@@ -86,6 +80,23 @@ function draw()
   //     snow.splice(i,1); 
   //   }
   // }
+  if(drawB && counter<1)
+  {
+    snowman = createSprite(100 , height-90);
+  snowman.addImage(snoimage); 
+  snowman.scale=0.29; 
+  snowman.velocity.x=4; 
+  snowman.friction =0.01;  
+  
+
+  snowman2 = createSprite(width-100 , height-90);
+  snowman2.addImage(snoimage2); 
+  snowman2.scale=0.29; 
+  snowman2.velocity.x=-4; 
+  snowman2.friction =0.01;  
+
+  counter++; 
+  }
   drawSprites(); 
 }
 
