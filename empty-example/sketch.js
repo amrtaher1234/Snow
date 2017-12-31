@@ -33,7 +33,7 @@ function setup() {
     }
   }
   gravity= createVector(0,0.03); 
-  for (let i =0; i<400; i++)
+  for (let i =0; i<250; i++)
   {
     let x = random(width); 
     let y = random(height); 
